@@ -4,14 +4,14 @@
 #
 Name     : R-rngWELL
 Version  : 0.10.5
-Release  : 4
+Release  : 5
 URL      : https://cran.r-project.org/src/contrib/rngWELL_0.10-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rngWELL_0.10-5.tar.gz
 Summary  : Toolbox for WELL Random Number Generators
 Group    : Development/Tools
 License  : BSD-3-Clause
-Requires: R-rngWELL-lib
-BuildRequires : clr-R-helpers
+Requires: R-rngWELL-lib = %{version}-%{release}
+BuildRequires : buildreq-R
 
 %description
 No detailed description available
@@ -32,11 +32,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532210574
+export SOURCE_DATE_EPOCH=1552786305
 
 %install
+export SOURCE_DATE_EPOCH=1552786305
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1532210574
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -71,8 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library rngWELL|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  rngWELL || :
 
 
 %files
@@ -99,7 +98,7 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/rngWELL/help/rngWELL.rdx
 /usr/lib64/R/library/rngWELL/html/00Index.html
 /usr/lib64/R/library/rngWELL/html/R.css
-/usr/lib64/R/library/rngWELL/libs/symbols.rds
+/usr/lib64/R/library/rngWELL/tests/test-well.R
 
 %files lib
 %defattr(-,root,root,-)
