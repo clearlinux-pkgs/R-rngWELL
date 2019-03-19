@@ -4,7 +4,7 @@
 #
 Name     : R-rngWELL
 Version  : 0.10.5
-Release  : 7
+Release  : 8
 URL      : https://cran.r-project.org/src/contrib/rngWELL_0.10-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rngWELL_0.10-5.tar.gz
 Summary  : Toolbox for WELL Random Number Generators
@@ -32,10 +32,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552938514
+export SOURCE_DATE_EPOCH=1552960255
 
 %install
-export SOURCE_DATE_EPOCH=1552938514
+export SOURCE_DATE_EPOCH=1552960255
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
