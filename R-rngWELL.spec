@@ -4,7 +4,7 @@
 #
 Name     : R-rngWELL
 Version  : 0.10.7
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/rngWELL_0.10-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rngWELL_0.10-7.tar.gz
 Summary  : Toolbox for WELL Random Number Generators
