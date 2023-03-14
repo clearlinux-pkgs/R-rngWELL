@@ -4,7 +4,7 @@
 #
 Name     : R-rngWELL
 Version  : 0.10.9
-Release  : 39
+Release  : 40
 URL      : https://cran.r-project.org/src/contrib/rngWELL_0.10-9.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rngWELL_0.10-9.tar.gz
 Summary  : Toolbox for WELL Random Number Generators
@@ -12,9 +12,6 @@ Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: R-rngWELL-lib = %{version}-%{release}
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 which were introduced in Panneton et al. (2006), ``Improved Long-Period
@@ -36,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1673919288
+export SOURCE_DATE_EPOCH=1678835349
 
 %install
-export SOURCE_DATE_EPOCH=1673919288
+export SOURCE_DATE_EPOCH=1678835349
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
